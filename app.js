@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /////////////////////////////////////
 /* Problem 1 (this is your demo that we'll solve in class)
 Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
@@ -11,7 +11,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) {
   //eslint-disable-line
   let total = a + b;
-  let result = [total, "The sum of " + a + " and " + b + " is " + total + "."];
+  let result = [total, 'The sum of ' + a + ' and ' + b + ' is ' + total + '.'];
   return result;
 }
 
@@ -29,8 +29,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) {
-  //eslint-disable-line
+function multiply(a, b) { //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -50,8 +49,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+function sumAndMultiply(a, b, c) { //eslint-disable-line
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -72,8 +70,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) {
-  //eslint-disable-line
+function sumArray(sumArr) { //eslint-disable-line
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -93,8 +90,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {
-  //eslint-disable-line
+function multiplyArray(multArr) { //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -121,8 +117,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) {
-  //eslint-disable-line
+function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
