@@ -34,7 +34,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
   let ans = a * b;
-  let output = [ans, "The product of " + a + " and " + b + " is 45."];
+  let output = [ans, "The product of " + a + " and " + b + " is " + ans + "."];
   return output;
 }
 
@@ -114,11 +114,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  let mult1 = multiply(multArr[0],multArr[1])[0];
+  let mult2 = multiply(mult1,multArr[2])[0];
+  let stringOutput = "The numbers ";
+  for (let i = 0; i < multArr.length - 1; i++) {
+    stringOutput += multArr[i] + ",";
+  }
+  stringOutput += multArr[multArr.length - 1];
+  stringOutput += " have a product of " + mult2 + ".";
+  console.log(stringOutput);
+  return [mult2,stringOutput];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
