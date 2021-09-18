@@ -14,7 +14,7 @@ function sum(a, b) { //eslint-disable-line
 
   let result = [total, 'The sum of ' + a + ' and ' + b + ' is ' + total + '.'];
 
-  console.log(result);
+  //console.log(result);
   return result;
 }
 
@@ -58,9 +58,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let sumTotal = (a + b + c);
-  let prodTotal = (a * b * c);
-  let result = [sumTotal, prodTotal, a + ' and ' + b + ' and ' + c + ' sum to ' + sumTotal + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + prodTotal + '.'];
+  let sumPass = sum(a, b);
+  let sumResult = sum(sumPass[0], c);
+  let prodPass = multiply(a, b);
+  let prodResult = multiply(prodPass[0], c);
+  let result = [sumResult[0], prodResult[0], a + ' and ' + b + ' and ' + c + ' sum to ' + sumResult[0] + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + prodResult[0] + "."];
+
+  //console.log(result);
   return result;
 }
 
