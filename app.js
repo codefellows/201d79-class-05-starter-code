@@ -121,6 +121,13 @@ testSumArray(testArray);
 // Write your code here
 function multiplyArray(multArr) {
     //eslint-disable-line
+    let totalSum = multiply(multArr[0], multArr[1]);
+    let newSum = multiply(totalSum[0], multArr[2]);
+    //console.log(newSum);
+    let result = `The numbers ${multArr} have a product of ${newSum[0]}.`;
+    console.log(result);
+
+    return [newSum[0], result];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
