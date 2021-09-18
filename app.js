@@ -88,22 +88,30 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+
+  //Define passing variable, storage variable, and blank string (resulting string starts with result).
   let sumPass;
   let sumStore = 0;
   let sumString = "";
+
+  //For loop to step through array, add each index to storage using passing variable.
   for (let i=0; i < (sumArr.length); i++){
     sumPass = sum(sumArr[i], sumStore);
     sumStore = sumPass[0];
     
+    //Append results string with current input, omit comma on last item
     if(i < sumArr.length-1){
       sumString += sumArr[i] + ",";
     }else{
       sumString += sumArr[i];
     }
   }
+
+  //Add the rest of the results string
   sumString += " was passed in as an array of numbers, and " + sumStore + " is their sum.";
   //console.log(sumString);
   
+  //Define and return result array.
   let arraySumResult = [sumStore, sumString];
   return arraySumResult;
 }
@@ -127,10 +135,35 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
+  //Create passing, storage, and sting variables. Result string starts with the first part of a sentence.
+  let prodPass;
+  let prodStore = 1;
+  let prodString = "The numbers ";
+
+  //Execute for loop to multiply each value in array by current storage value.
+  for (let i=0; i < (multArr.length); i++){
+    prodPass = multiply(multArr[i], prodStore);
+    prodStore = prodPass[0];
+    
+    //Append string with current input array value. Omit comma on last step.
+    if(i < multArr.length-1){
+      prodString += multArr[i] + ",";
+    }else{
+      prodString += multArr[i];
+    }
+  }
+
+  //Add the rest of the string.
+  prodString += " have a product of " + prodStore + ".";
+
+  //Define and return result.
+  let arrayProdResult = [prodStore, prodString];
+  //console.log(arrayProdResult);
+  return arrayProdResult;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
