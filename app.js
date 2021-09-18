@@ -188,9 +188,34 @@ let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
+  //Create passing, storage, and sting variables. Result string starts with the first part of a sentence.
+  let prodPass;
+  let prodStore = 1;
+  let prodString = "The numbers ";
+
+  //Execute for loop to multiply each value in array by current storage value.
+  for (let i=0; i < (dynamicArray.length); i++){
+    prodPass = multiply(dynamicArray[i], prodStore);
+    prodStore = prodPass[0];
+    
+    //Append string with current input array value. Omit comma on last step.
+    if(i < dynamicArray.length-1){
+      prodString += dynamicArray[i] + ",";
+    }else{
+      prodString += dynamicArray[i];
+    }
+  }
+
+  //Add the rest of the string.
+  prodString += " have a product of " + prodStore + ".";
+
+  //Define and return result.
+  let arrayProdResult = [prodStore, prodString];
+  //console.log(arrayProdResult);
+  return arrayProdResult;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
