@@ -14,7 +14,7 @@ function sum(a, b) { //eslint-disable-line
 
   let result = [total, 'The sum of ' + a + ' and ' + b + ' is ' + total + '.'];
 
-  console.log(result);
+  //console.log(result);
   return result;
 }
 
@@ -92,7 +92,7 @@ function sumArray(sumArr) { //eslint-disable-line
     stringOutput += sumArr[i] + ",";
   }
   stringOutput += sumArr[sumArr.length - 1] + " was passed in as an array of numbers, and " + sum2 + " is their sum.";
-  console.log(stringOutput);
+  //console.log(stringOutput);
   return [sum2, stringOutput];
 }
 
@@ -122,7 +122,7 @@ function multiplyArray(multArr) { //eslint-disable-line
   }
   stringOutput += multArr[multArr.length - 1];
   stringOutput += " have a product of " + mult2 + ".";
-  console.log(stringOutput);
+  //console.log(stringOutput);
   return [mult2,stringOutput];
 }
 
@@ -151,10 +151,29 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  let stringOutput = "The numbers ";
+  let runningProduct = 1;
+  let num1;
+  let num2;
+  for(let i = 0; i < dynamicArray.length - 1; i++) {
+    if (i === 0) {
+      num1 = runningProduct;
+      num2 = dynamicArray[0]
+    } else {
+      num1 = dynamicArray[i];
+      num2 = dynamicArray[i + 1];
+    }
+    runningProduct = multiply(num1,num2)[0];
+    stringOutput += num1 + ","
+  }
+  runningProduct = multiply(runningProduct, dynamicArray[dynamicArray.length - 1])[0];
+  stringOutput += dynamicArray[dynamicArray.length - 1];
+  stringOutput += " have a product of " + runningProduct + ".";
+  console.log(stringOutput);
+  return [runningProduct, stringOutput];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
