@@ -67,8 +67,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let newProdTot = newProd[0];
 
   let result = [factoredsumTot, newProdTot, a + " and " + b + " and " + c + " sum to " + factoredsumTot + ".",
-    "The product of " + a + " and " + b + " and " + c + " is " + newProdTot + ".",
-  ];
+    "The product of " + a + " and " + b + " and " + c + " is " + newProdTot + ".",];
   console.log(result);
   return result;
 }
