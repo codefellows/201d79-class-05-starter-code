@@ -12,7 +12,7 @@ function sum(a, b) { //eslint-disable-line
 
   let total = a + b;
 
-  let result = [total, 'The sum of ' + a + ' and ' + b + ' is ' + total + '.'];
+  var result = [total, 'The sum of ' + a + ' and ' + b + ' is ' + total + '.'];
 
   console.log(result);
   return result;
@@ -36,7 +36,7 @@ function multiply(a, b) { //eslint-disable-line
 
   let total = a * b;
 
-  let result = [total, "The product of " + a + ' and ' + b + ' is ' + total + '.']
+  var result = [total, "The product of " + a + ' and ' + b + ' is ' + total + '.']
 
   console.log(result);
   return result;
@@ -62,10 +62,25 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+  var sumTotal1 = sum(a, b)[0];
+ var sumTotal1Array = sumTotal1; // places values into the first index on the array
+  var sumTotal2 = sum(sumTotal1Array, c)[0];
+ let firstElement = sumTotal2; // replaces the value in the first index with the final value
+
+  var product1 = multiply(a, b);
+  var product1Array = product1[0];
+  var product2 = multiply(product1Array, c);
+ let secondElement = product2[0];
+
+  let thirdElement = a + ' and ' + b + ' and ' + c + ' sum to ' + firstElement + '.';
+  let fourthElement = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + secondElement + '.';
+
+  return [firstElement, secondElement, thirdElement, fourthElement];
 }
 
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
